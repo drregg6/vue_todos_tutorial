@@ -10,9 +10,7 @@
 import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
 import Todos from './components/Todos';
-
 import axios from 'axios';
-
 export default {
   name: 'app',
   components: {
@@ -36,7 +34,6 @@ export default {
     },
     addTodo(newTodo) {
       const { title, completed } = newTodo;
-
       axios
         .post('https://jsonplaceholder.typicode.com/todos', {
         title,
@@ -67,12 +64,10 @@ export default {
     margin: 0;
     padding: 0;
   }
-
   body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
   }
-
   .btn {
     display: inline-block;
     border: none;
